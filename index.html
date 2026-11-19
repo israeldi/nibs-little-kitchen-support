@@ -91,14 +91,27 @@
     .hero > figure { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
     .hero-copy > p:not(.eyebrow) { max-width: 33rem; }
     .hero-intro { font-size: clamp(1.1rem, 2vw, 1.3rem); }
-    .review-note {
-      display: inline-block;
-      padding: .55rem .9rem;
-      border-left: 4px solid var(--coral);
-      background: var(--wash);
-      font-size: .9rem;
-      font-weight: 650;
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .65rem 1rem;
+      margin-bottom: 1.1rem;
     }
+    .hero-actions a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      font-weight: 750;
+    }
+    .hero-install {
+      padding: .55rem .95rem;
+      border-radius: .65rem;
+      background: var(--teal);
+      color: var(--cream);
+      text-decoration: none;
+    }
+    .hero-install:hover { text-decoration: underline; }
     .text-link { display: inline-block; margin-top: .5rem; font-weight: 750; }
     figure { margin: 0; }
     .image-link { display: block; }
@@ -137,7 +150,7 @@
       .wrap { width: min(100% - 2rem, 36rem); }
       .site-header { align-items: flex-start; flex-direction: column; gap: .7rem; }
       .hero, .story-grid, .parent-heading, .offer-grid { grid-template-columns: 1fr; }
-      .hero { gap: 2.5rem; }
+      .hero { gap: 1.5rem; padding-block-start: 1.5rem; }
       .hero-heading, .hero-copy, .hero > figure { grid-column: auto; grid-row: auto; }
       h1 { max-width: 10ch; font-size: clamp(3.2rem, 13vw, 4.8rem); }
       .story-grid { gap: 2.8rem; }
@@ -164,19 +177,22 @@
         <p class="eyebrow">Choose · Cut · Cook · Serve</p>
         <h1 id="hero-title">Make a meal your way.</h1>
       </div>
+      <div class="hero-copy">
+        <p class="hero-intro">A pretend cooking game for kids on iPhone and iPad.</p>
+        <div class="hero-actions">
+          <a class="hero-install" href="https://apps.apple.com/app/apple-store/id6829138641?pt=118613426&amp;ct=official-site-nov17&amp;mt=8" rel="noreferrer">Try free on the App Store</a>
+          <a href="assets/nibs-little-kitchen-gameplay-build-70.mp4" aria-label="Watch gameplay (27 seconds, silent)">Watch gameplay</a>
+        </div>
+        <p>Choose a food, cut it, cook it, then see how your diner reacts when you serve it.</p>
+        <p>Free play starts with Nib and Mira, six foods, all the tools and seasonings. No ads.</p>
+        <p><a class="text-link" href="#the-kitchen">Take a look around the kitchen <span aria-hidden="true">↓</span></a></p>
+      </div>
       <figure>
         <a class="image-link" href="assets/01-slice.png" aria-label="View the cutting screenshot at full size">
           <img class="game-image" src="assets/01-slice.png" width="2622" height="1206" alt="Two separated carrot pieces on a wooden cutting board in Nib’s Little Kitchen, with Move food selected and the Slice control visible.">
         </a>
         <figcaption><span class="caption-title">Choose, then cut.</span> Actual gameplay after cutting and moving a carrot piece.</figcaption>
       </figure>
-      <div class="hero-copy">
-        <p class="hero-intro">A pretend cooking game for kids on iPhone and iPad. Choose a food, cut it, cook it, then see how your diner reacts when you serve it.</p>
-        <p><a class="text-link" href="assets/nibs-little-kitchen-gameplay-build-70.mp4">Watch gameplay (27 seconds, silent)</a></p>
-        <p>Free play starts with Nib and Mira, six foods, all the tools and seasonings. No ads.</p>
-        <p class="review-note"><a href="https://apps.apple.com/app/apple-store/id6829138641?pt=118613426&amp;ct=official-site-nov17&amp;mt=8" rel="noreferrer">Try free on the App Store</a></p>
-        <p><a class="text-link" href="#the-kitchen">Take a look around the kitchen <span aria-hidden="true">↓</span></a></p>
-      </div>
     </section>
     <section class="story wrap" id="the-kitchen" aria-labelledby="story-title">
       <div class="section-intro">
